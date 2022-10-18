@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="wit_imu" type="imu.py" respawn="false" name="wit_imu" output="screen">
+    <!-- Com ID string in format "VID:PID",must written in lower. -->
+    <param name="port_id"         type="string" value="1a86:7523"/> 
+    <param name="frame_id"         type="string" value="imu_link"/>
+    <param name="imu_topic"         type="string" value="/imu"/> 
+    <!-- IMU baudrate -->
+    <param name="serial_baudrate"     type="int"    value="115200"/>
+  </node>
+</launch>
